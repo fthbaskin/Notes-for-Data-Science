@@ -1,0 +1,18 @@
+# vscode
+.vscode
+.vscode/*
+
+# python
+.pyc
+*.pyc
+__pycache__
+__pycache__/*
+
+# jupyter
+.ipynb_checkpoints
+.ipynb_checkpoints/*
+
+# venv
+.venv
+.venv/*
+
