@@ -202,3 +202,123 @@ json_dict_example = json.loads(json_text_example)
 for key, value in json_dict_example.items():
     print(key, value)
 ```
+
+## String Operations
+
+### Printing Multiple Items with Generator Expressions
+
+#### Printing Array of Strings as a List Using Generator Expression
+```Python
+str_arr = ['Hello', 'World']
+print(*[f'- {str_item}' for str_item in str_arr], sep='\n')
+# Output: - Hello
+#         - World
+```
+
+#### Format String with Jjoin Method and Generator Expression
+```Python
+str_arr = ['Hello', 'World']
+print('\n'.join([f'- {str_item}' for str_item in str_arr]))
+# Output: - Hello
+#         - World
+```
+
+### String Formatting
+
+#### F-String
+```Python
+name = 'John'
+age = 30
+print(f'My name is {name} and I am {age} years old.')
+# Output: My name is John and I am 30 years old.
+```
+
+#### Format Method and Positional Arguments
+```Python
+# Format string with format method
+name = 'John'
+age = 30
+print('My name is {} and I am {} years old.'.format(name, age))
+# Output: My name is John and I am 30 years old.
+
+# Format string with format method and positional arguments
+name = 'John'
+age = 30
+print('My name is {first} and I am {second} years old.'.format(first=name, second=age))
+# Output: My name is John and I am 30 years old.
+```
+
+#### Format String with % Operator
+```Python
+# Format string with % operator
+name = 'John'
+age = 30
+print('My name is %s and I am %d years old.' % (name, age))
+# Output: My name is John and I am 30 years old.
+```
+
+
+
+### Substrings
+
+#### Startswith Endswith
+Python allows strings to be checked whether it is starting or ending with a substring.
+```Python
+# Checking if a string starts with/ends with a specific substring
+urls = ['https://www.google.com', 'https://www.facebook.com', 'https://www.twitter.com',
+        'https://www.linkedin.com', 'https://www.instagram.com', 'https://www.pinterest.com']
+for url in urls:
+    if url.startswith('https://www.'):
+        print(f'{url} starts with https://www.')
+    if url.endswith('.com'):
+        print(f'{url} ends with .com')
+# Output: https://www.google.com starts with https://www.
+#         https://www.google.com ends with .com
+#         https://www.facebook.com starts with https://www.
+#         https://www.facebook.com ends with .com
+#         https://www.twitter.com starts with https://www.
+#         https://www.twitter.com ends with .com
+#         https://www.linkedin.com starts with https://www.
+#         https://www.linkedin.com ends with .com
+#         https://www.instagram.com starts with https://www.
+#         https://www.instagram.com ends with .com
+#         https://www.pinterest.com starts with https://www.
+#         https://www.pinterest.com ends with .com
+```
+
+#### Checking Whether String Contains a Substring
+It is possible to check whether a substring is in the string by using ``in``.`
+```Python
+# Checking if a string contains a specific substring
+string = 'Hello, World!'
+if 'World' in string:
+    print('World is present in the string {string}.'.format(string=string))
+# Output: World is present in the string Hello, World!.
+```
+
+
+### String Manipulation Metgods
+
+#### Join
+```Python
+# Joining strings using join method
+str_arr = ['Joshua', 'David', 'John']
+print(', '.join(str_arr))
+# Output: Joshua, David, John
+```
+
+#### Split
+```Python
+# Splitting a string into a list of strings
+string = 'Joshua, David, John'
+print(string.split(', '))
+# Output: ['Joshua', 'David', 'John']
+```
+
+#### Replace
+```Python
+# Replacing a substring with another substring
+string = 'Joshua, David, John'
+print(string.replace('David', 'Doe'))
+# Output: Joshua, Doe, John
+```
