@@ -25,7 +25,7 @@ function1("Deneme", 123)
 #         Function1 is called, Deneme, 123
 ```
 
-#### Decorators that Take Parameters
+#### Decorators That Take Parameters
 Decorator functions themselves can take parameters. When a function is __defined__ (not called), code in the outer decorator is executed. You can pass the same parameter in the inner decorator which executes when the function is __called__.
 ```Python
 def function_decorator2(param1):
@@ -146,7 +146,7 @@ According to ChatGPT:
 | **Recursion**                           | No (shallow)                                    | Yes (deep)                                  |
 | **Custom dataclass fields**             | Includes everything (including non-init fields) | Only includes public fields by default      |
 
-### Deserializing Dictionaries
+### Deserializing Dictionaries into Dataclasses
 It is possible to deserialize dictionaries into specific dataclasses. But, dictionary must contain all of the fields in the dataclass. In the initialization, parameters are passed by using `**kwargs` method.
 ```Python
 from dataclasses import dataclass, asdict
@@ -258,7 +258,6 @@ print('My name is %s and I am %d years old.' % (name, age))
 ```
 
 
-
 ### Substrings
 
 #### Startswith Endswith
@@ -297,7 +296,7 @@ if 'World' in string:
 ```
 
 
-### String Manipulation Metgods
+### String Manipulation Methods
 
 #### Join
 ```Python
